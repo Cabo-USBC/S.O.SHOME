@@ -1,9 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background: #24868F;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+@media (min-width: 360px) {
+  body{
+    font-size: 14px;
+  }
+}
+@media (min-width: 400px) {
+  body{
+    font-size: 16px;
+  }
+}
+@media (min-width: 550px) {
+  body{
+    font-size: 22px;
+  }
+}
+@media (min-width: 1000px) {
+  body{
+    font-size: 30px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
   background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
 }
 
 .menu ul {
@@ -15,8 +53,20 @@ body {
   list-style: none;
 }
 
+.menu a {
+  padding: 15px 11px;
+  display: block;
+  transition: background-color 1s, color 1s;
+}
+.menu a:active,
+.menu a:hover {
+  background-color: #24868F;
+  color: white;
+}
+
 a {
   text-decoration: none;
+  font-family: 'Rancho', cursive;
 }
 
 a:hover {
@@ -25,6 +75,148 @@ a:hover {
 
 .site-title,
 .site-subtitle {
-  color: white;
   text-align: center;
+}
+
+.site-title{
+  font-size: 4em;
+  color: white;
+  font-family: 'Lora', serif;
+  text-shadow: 10px 10px black;
+  text-shadow: 0px 0px 10px white;
+}
+
+.site-subtitle{
+  color: black;
+  line-height: 2em;
+  font-family: 'Caladea', serif;
+}
+
+.site-subtitle1{
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Lora', serif;
+}
+.Nossa-Empresa,
+.contato,
+.Portfólio {
+  padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Nossa-Empresa h2,
+.contato h2,
+.Portfólio h2 {
+  color: white;
+  font-family: 'Lora', serif;
+  margin-bottom: 1.5em;
+  text-decoration: underline;
+  font-size: 1.1em;
+  padding: 30px;
+}
+
+@media(min-width:1200px){
+  .Nossa-Empresa,
+  .contato,
+  .Portfólio {
+    max-width: 1200px;
+  }
+}
+
+.contato h2{
+  font-size: 2em;
+}
+
+.Nossa-Empresa p {
+  color: white;
+  margin-bottom: 1em;
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.Portfólio .grid {
+  display: grid;
+  gap: 2em;
+  justify-content: center;
+}
+
+@media (min-width: 603px) {
+  .Portfólio .grid{
+    grid-template-columns: 240px 240px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 880px) {
+  .Portfólio .grid{
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Portfólio .grid{
+   grid-template-columns: repeat(4, 240px);
+   justify-content: center; 
+  }
+}
+
+.portifolio figure {
+  text-align: center;
+} 
+  
+.img-portfolio {
+  height: auto;
+  width: 100%;
+  border-radius: 5%;
+  transition: transform 400ms;
+}
+
+.img-portfolio:hover{
+  transform: scale(1.1);
+}
+
+.contato {
+  text-align: center;
+  align-content: center;
+}
+
+.contato .icons {
+  height: 60vh;
+  /*text-align: center;
+  line-height: 7em;*/
+}
+
+.contato a {
+  color: white;
+  font-size: 3em;
+  padding-left: 30px;
+}
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px white;
+  transition: text-shadow 0.5s;
+}
+
+.paragrafo {
+  margin-bottom: 1em;
+}
+
+.logo {
+  height: auto;
+  width: 250px;
+  border-radius: 50%;
+}
+
+@media(min-width: 700px){
+  .logo {
+    height: auto;
+    width: 400px;
+    border-radius: 50%;
+  }
+  .Nossa-Empresa .avatar{
+    float: right;
+  }
 }
